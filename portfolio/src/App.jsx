@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-    <h1 className=''>Akash thandaa LEO </h1>
-    </>
-  )
-}
+    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
+      <div className="fixed top-0 -z-10 h-full w-full">
+         <div
+        class="absolute inset-0 -z-10 
+      h-full w-full items-center px-5 py-24
+       [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#0e032e_100%)]"
+      ></div>
+      </div>
+      <div className="container mx-auto px-8">
+        <Navbar />
+        <Hero />
+        <About />
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;
